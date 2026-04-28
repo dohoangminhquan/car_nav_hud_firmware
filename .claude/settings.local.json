@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/yenmo/_Project/_SenseTechLab/car_nav_hud_firmware remote -v)",
+      "Bash(git -C /Users/yenmo/_Project/_SenseTechLab/car_nav_hud_firmware log --oneline -10)",
+      "Bash(chmod +x /Users/yenmo/_Project/_SenseTechLab/car_nav_hud_firmware/tools/update_manifest.sh)",
+      "Bash(./tools/update_manifest.sh 1.0.0 \"Smoke test of update_manifest.sh\")",
+      "Bash(python3 -m json.tool manifest.json)",
+      "Bash(shasum -a 256 firmware.bin)",
+      "Bash(./tools/update_manifest.sh carnavhud-1.0.0.1.bin 1.0.0.1 \"Initial release\")"
+    ]
+  }
+}
